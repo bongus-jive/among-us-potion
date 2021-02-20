@@ -1,0 +1,12 @@
+{
+  "itemName" : "pat_amonguspotion",
+  "price" : 69420,
+  "rarity" : "Essential",
+  "category" : "medicine",
+	"tooltipFields" : {"subtitle" : "Potion"},
+  "inventoryIcon" : "amonguspotion.png",
+  "description" : "turns you into an Among Us from hit 2018 video game \"Among Us\"",
+  "shortdescription" : "^blue;Among Us Potion",
+  "effects" : [ [ "pat_amongus_transform" ] ],
+  "emitters" : [ "drinking" ]
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "pat_amongus_transform",
+  "effectConfig" : {
+		"transform" : "pat_amongus_blue"
+	},
+  "defaultDuration" : 10,
+
+  "scripts" : ["transform.lua"]
+}
