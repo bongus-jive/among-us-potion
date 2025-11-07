@@ -1,35 +1,12 @@
 {
-  "globalTagDefaults": {
-    "flip": ""
-  },
-
   "animatedParts": {
-    "stateTypes": {
-      "amongus": {
-        "default": "off",
-        "states": {
-          "off": { },
-          "on": { }
-        }
-      }
-    },
-
     "parts": {
       "blue": {
         "properties": {
           "centered": true,
           "offset": [ 0, 0 ],
-          "transformationGroups": [ "amongus" ]
-        },
-
-        "partStates": {
-          "amongus": {
-            "on": {
-              "properties": {
-                "image": "blue.png<flip>"
-              }
-            }
-          }
+          "transformationGroups": [ "amongus" ],
+          "image": "blue.png"
         }
       }
     }

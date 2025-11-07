@@ -12,7 +12,6 @@ function init()
   effect.modifyDuration(math.huge)
   
   effect.setParentDirectives("?multiply=00000000")
-  animator.setAnimationState("amongus", "on")
   animator.resetTransformationGroup("amongus")
   animator.scaleTransformationGroup("amongus", 0.1)
   
