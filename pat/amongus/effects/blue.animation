@@ -1,6 +1,6 @@
 {
-	"globalTagDefaults" : {
-		"flip" : ""
+	"globalTagDefaults": {
+		"flip": ""
 	},
 
 	"animatedParts": {
@@ -8,8 +8,8 @@
 			"amongus": {
 				"default": "off",
 				"states": {
-					"off": {},
-					"on": {}
+					"off": { },
+					"on": { }
 				}
 			}
 		},
@@ -18,8 +18,8 @@
 			"blue": {
 				"properties": {
 					"centered": true,
-					"offset": [0, 0],
-					"transformationGroups": ["amongus"]
+					"offset": [ 0, 0 ],
+					"transformationGroups": [ "amongus" ]
 				},
 
 				"partStates": {
@@ -34,12 +34,12 @@
 			}
 		}
 	},
-	
-  "transformationGroups": {
-    "amongus": {}
-  },
-	
-	"sounds" : {
-		"transform" : ["/sfx/interface/inventory_pickup1.ogg"]
+
+	"transformationGroups": {
+		"amongus": { }
+	},
+
+	"sounds": {
+		"transform": [ "/sfx/interface/inventory_pickup1.ogg" ]
 	}
 }
