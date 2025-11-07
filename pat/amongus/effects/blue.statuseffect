@@ -13,5 +13,5 @@
 
   "scripts" : ["blue.lua"],
 
-  "animationConfig" : "amongus.animation"
+  "animationConfig" : "blue.animation"
 }
