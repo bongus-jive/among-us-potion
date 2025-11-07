@@ -1,45 +1,45 @@
 {
-	"globalTagDefaults": {
-		"flip": ""
-	},
+  "globalTagDefaults": {
+    "flip": ""
+  },
 
-	"animatedParts": {
-		"stateTypes": {
-			"amongus": {
-				"default": "off",
-				"states": {
-					"off": { },
-					"on": { }
-				}
-			}
-		},
+  "animatedParts": {
+    "stateTypes": {
+      "amongus": {
+        "default": "off",
+        "states": {
+          "off": { },
+          "on": { }
+        }
+      }
+    },
 
-		"parts": {
-			"blue": {
-				"properties": {
-					"centered": true,
-					"offset": [ 0, 0 ],
-					"transformationGroups": [ "amongus" ]
-				},
+    "parts": {
+      "blue": {
+        "properties": {
+          "centered": true,
+          "offset": [ 0, 0 ],
+          "transformationGroups": [ "amongus" ]
+        },
 
-				"partStates": {
-					"amongus": {
-						"on": {
-							"properties": {
-								"image": "blue.png<flip>"
-							}
-						}
-					}
-				}
-			}
-		}
-	},
+        "partStates": {
+          "amongus": {
+            "on": {
+              "properties": {
+                "image": "blue.png<flip>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
 
-	"transformationGroups": {
-		"amongus": { }
-	},
+  "transformationGroups": {
+    "amongus": { }
+  },
 
-	"sounds": {
-		"transform": [ "/sfx/interface/inventory_pickup1.ogg" ]
-	}
+  "sounds": {
+    "transform": [ "/sfx/interface/inventory_pickup1.ogg" ]
+  }
 }
