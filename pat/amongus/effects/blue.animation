@@ -1,12 +1,16 @@
 {
+  "partTagDefaults": {
+    "amongus": { "color": "1" }
+  },
+
   "animatedParts": {
     "parts": {
-      "blue": {
+      "amongus": {
         "properties": {
           "centered": true,
           "offset": [ 0, 0 ],
           "transformationGroups": [ "amongus" ],
-          "image": "blue.png"
+          "image": "crew.png:<color>"
         }
       }
     }
