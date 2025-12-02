@@ -1,5 +1,5 @@
 {
-  "name": "pat_amongus_blue",
+  "name": "pat_amongus_sussy",
   "effectConfig": {
     "movementParams": {
       "mass": 0.25,
@@ -13,7 +13,7 @@
   },
   "defaultDuration": 1,
 
-  "scripts": [ "blue.lua" ],
+  "scripts": [ "sussy.lua" ],
 
-  "animationConfig": "blue.animation"
+  "animationConfig": "sussy.animation"
 }
