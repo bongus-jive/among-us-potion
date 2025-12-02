@@ -1,48 +1,45 @@
-require "/scripts/util.lua"
-require "/scripts/vec2.lua"
-
 function init()
+  local variants = effect.getParameter("variants", 1)
+  animator.setPartTag("amongus", "color", math.random(variants) - 1)
   animator.playSound("transform")
   
-  poly = effect.getParameter("poly", {})
-  movementParams = effect.getParameter("movementParams", {})
+  local movementParams = effect.getParameter("movementParams", {})
+  local poly = effect.getParameter("poly")
   movementParams.standingPoly = poly
   movementParams.crouchingPoly = poly
   
-  effect.modifyDuration(math.huge)
-  
-  effect.setParentDirectives("?multiply=00000000")
-  animator.resetTransformationGroup("amongus")
-  animator.scaleTransformationGroup("amongus", 0.1)
-  
-  angle = 0
-end
-
-function update(dt)
-  animator.resetTransformationGroup("amongus")
-  animator.scaleTransformationGroup("amongus", 0.1)
-  
-  local velocity = mcontroller.xVelocity()
-  local direction = lastDir or 1
-  if velocity > 0 then
-    direction = 1
-  elseif velocity < 0 then
-    direction = -1
-  end
-  
-  local positionDiff = world.distance(lastPosition or mcontroller.position(), mcontroller.position())
-  angularVelocity = -vec2.mag(positionDiff) / dt * direction
-  angle = math.fmod(math.pi * 2 + angle + angularVelocity * dt, math.pi * 2)
-  
-  animator.rotateTransformationGroup("amongus", angle)
-  mcontroller.setRotation(angle)
-  
+  mcontroller.setAutoClearControls(false)
   mcontroller.controlParameters(movementParams)
   
-  lastPosition = mcontroller.position()
-  lastDir = direction
+  effect.modifyDuration(math.huge)
+  effect.setParentDirectives("?multiply=0000")
+  
+  position = mcontroller.position()
+  direction = mcontroller.facingDirection()
+  
+  scale = effect.getParameter("scale", 0.1)
+  updateTransforms()
+end
+
+function update()
+  local newPos = mcontroller.position()
+
+  local vel = mcontroller.xVelocity()
+  if vel ~= 0 then direction = vel > 0 and 1 or -1 end
+
+  local mag = world.magnitude(position, newPos)
+  mcontroller.setRotation(mcontroller.rotation() - mag * direction)
+  position = newPos
+
+  updateTransforms()
 end
 
 function uninit()
   mcontroller.setRotation(0)
+end
+
+function updateTransforms()
+  animator.resetTransformationGroup("amongus")
+  animator.scaleTransformationGroup("amongus", scale)
+  animator.rotateTransformationGroup("amongus", mcontroller.rotation())
 end

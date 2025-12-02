@@ -1,17 +1,16 @@
 function init()
-  transform = effect.getParameter("transform")
-  status.removeEphemeralEffect(transform)
+  transformEffect = effect.getParameter("transform")
+  status.removeEphemeralEffect(transformEffect)
   
-  defaultDuration = config.getParameter("defaultDuration", 10)
+  startDuration = effect.duration()
 end
 
-function update(dt)
-  world.debugText(defaultDuration, mcontroller.position(), "red")
-
-  local hex = string.format("%02x", 127 + math.floor((effect.duration() / defaultDuration) * 128))
-  effect.setParentDirectives("?multiply=FF"..hex..hex)
+function update()
+  local r = math.min(1, math.max(0, effect.duration() / startDuration))
+  local h = string.format("%02x", math.floor(r * 155 + 100))
+  effect.setParentDirectives(string.format("?multiply=FF%s%s", h, h))
 end
 
 function uninit()
-  status.addEphemeralEffect(transform)
+  status.addEphemeralEffect(transformEffect)
 end
