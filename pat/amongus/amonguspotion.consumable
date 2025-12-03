@@ -1,6 +1,6 @@
 {
   "itemName": "pat_amonguspotion",
-  "price": 69420,
+  "price": 67,
   "rarity": "Legendary",
   "category": "medicine",
   "tooltipFields": { "subtitle": "Potion" },
@@ -9,5 +9,6 @@
   "shortdescription": "Among Us Potion",
   "effects": [ [ "pat_amongus_transform" ] ],
   "emitters": [ "drinking" ],
-  "blockingEffects": [ "pat_amongus_transform", "pat_amongus_sussy" ]
+  "blockingEffects": [ "pat_amongus_transform", "pat_amongus_sussy" ],
+  "learnBlueprintsOnPickup": [ "pat_amonguspotion" ]
 }

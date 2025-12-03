@@ -1,0 +1,9 @@
+{
+  "input": [
+    { "item": "bluedye", "count": 1 },
+    { "item": "biosample", "count": 1 },
+    { "item": "sewage", "count": 1 }
+  ],
+  "output": { "item": "pat_amonguspotion", "count": 1 },
+  "groups": [ "craftingmedical", "healing" ]
+}

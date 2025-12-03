@@ -1,0 +1,26 @@
+[
+  [
+    { "op": "test", "path": "/hemogoblinTreasure/0/1/fill", "inverse": true },
+    { "op": "add", "path": "/hemogoblinTreasure/0/1/fill", "value": [ ] }
+  ],
+  [
+    { "op": "test", "path": "/hemogoblinVaultTreasure/0/1/fill", "inverse": true },
+    { "op": "add", "path": "/hemogoblinVaultTreasure/0/1/fill", "value": [ ] }
+  ],
+  [
+    {
+      "op": "add",
+      "path": "/pat_amonguspotion_drop",
+      "value": [
+        [ 0,
+          {
+            "pool": [ { "weight": 1, "item": "pat_amonguspotion" } ],
+            "poolRounds": [ [ 0.95, 0 ], [ 0.05, 1 ] ]
+          }
+        ]
+      ]
+    },
+    { "op": "add", "path": "/hemogoblinTreasure/0/1/fill/-", "value": { "pool": "pat_amonguspotion_drop" } },
+    { "op": "add", "path": "/hemogoblinVaultTreasure/0/1/fill/-", "value": { "pool": "pat_amonguspotion_drop" } }
+  ]
+]

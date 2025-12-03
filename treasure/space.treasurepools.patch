@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/spaceTrash/0/1/pool/-",
+    "value": { "weight": 0.5, "item": "pat_amonguspotion" }
+  }
+]
