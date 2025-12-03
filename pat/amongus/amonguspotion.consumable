@@ -8,5 +8,6 @@
   "description": "It smells awful.",
   "shortdescription": "Among Us Potion",
   "effects": [ [ "pat_amongus_transform" ] ],
-  "emitters": [ "drinking" ]
+  "emitters": [ "drinking" ],
+  "blockingEffects": [ "pat_amongus_transform", "pat_amongus_sussy" ]
 }
