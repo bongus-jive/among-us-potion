@@ -11,7 +11,7 @@
     "variants": 12,
     "scale": 0.1
   },
-  "defaultDuration": 1,
+  "defaultDuration": 300,
 
   "scripts": [ "sussy.lua" ],
 

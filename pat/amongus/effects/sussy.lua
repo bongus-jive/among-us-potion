@@ -11,11 +11,10 @@ function init()
   mcontroller.setAutoClearControls(false)
   mcontroller.controlParameters(movementParams)
   
-  effect.modifyDuration(math.huge)
-  effect.setParentDirectives("?multiply=0000")
-  
   position = mcontroller.position()
   direction = mcontroller.facingDirection()
+
+  effect.setParentDirectives("?multiply=0000")
   
   scale = effect.getParameter("scale", 0.1)
   updateTransforms()
