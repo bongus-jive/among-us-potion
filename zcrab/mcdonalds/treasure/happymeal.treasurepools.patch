@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/zcrab_happymealdrink/0/1/pool/-",
+    "value": { "weight": 0.25, "item": "pat_amonguspotion" }
+  }
+]
