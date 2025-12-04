@@ -7,8 +7,8 @@
   "inventoryIcon": "amonguspotion.png",
   "description": "It smells awful.",
   "shortdescription": "Among Us Potion",
-  "effects": [ [ "pat_amongus_transform" ] ],
   "emitters": [ "drinking" ],
-  "blockingEffects": [ "pat_amongus_transform", "pat_amongus_sussy" ],
+  "effects": [ [ "pat_amongus_transform" ] ],
+  "blockingEffects": [ "pat_amongus_transform" ],
   "learnBlueprintsOnPickup": [ "pat_amonguspotion" ]
 }

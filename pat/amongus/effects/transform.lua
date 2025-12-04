@@ -1,4 +1,11 @@
 function init()
+  transformEffect = effect.getParameter("transform")
+  
+  if status.uniqueStatusEffectActive(transformEffect) then
+    status.addEphemeralEffect(transformEffect)
+    effect.expire()
+  end
+  
   startDuration = effect.duration()
 end
 
@@ -10,6 +17,6 @@ end
 
 function uninit()
   if effect.duration() <= 0 then
-    status.addEphemeralEffect(effect.getParameter("transform"))
+    status.addEphemeralEffect(transformEffect)
   end
 end
