@@ -5,5 +5,8 @@
   },
   "defaultDuration": 10,
 
-  "scripts": [ "transform.lua" ]
+  "scripts": [ "transform.lua" ],
+
+  "label": "sus",
+  "icon": "sussy.png"
 }
